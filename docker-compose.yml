@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  deno:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    restart: "unless-stopped"
+    ports:
+    - 3000:3000
+    volumes:
+    - ./src:/app
+    command: deno run --allow-net --allow-read --allow-write --unstable --watch /app/index.tsx
+#    entrypoint: sleep 100000

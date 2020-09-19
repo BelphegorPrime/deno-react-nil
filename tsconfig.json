@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "plugins": [
+        {
+          "name": "typescript-deno-plugin",
+          "importmap": "import_map.json"
+        }
+      ]
+    },
+    "deno": {
+        "enabled": true
+    }
+  }
